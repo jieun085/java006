@@ -1,0 +1,552 @@
+/* 기본 리셋 및 폰트 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 전체 배경 및 레이아웃 설정 */
+body {
+    background-color: #101013;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* 헤더 스타일 */
+header {
+    background: url('../java006/mainpage_background.jpg') no-repeat center center; /* 네비게이션 바에 배경 이미지 추가 */
+    background-size: cover; /* 배경 이미지 크기 조정 */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-top: 20px; /* 버튼 그룹과 간격 조정 */
+}
+
+/* 버튼 그룹 스타일 */
+.button2 {
+    width: 150px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #3f51b5;
+    color: #ffffff;
+    margin-top: 30px;
+    margin-right: 50px; /* 버튼 간 간격 조정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    line-height: 1; /* 텍스트 높이 조정 */
+}
+
+.button2 span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+}
+
+.button2:hover span {
+    color: #ffffff;
+}
+
+.button2::before,
+.button2::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.button2::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.button2:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    position: relative; /* 원하는 위치로 조정 */
+}
+
+.button-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.button-group li {
+    margin: 0 10px; /* 버튼 간 간격 */
+}
+
+/* From Uiverse.io by mrhyddenn */ 
+.button {
+    display: flex;
+    margin-left: 16%;
+  }
+  
+  .box {
+    width: 35px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    transition: all .8s;
+    cursor: pointer;
+    position: relative;
+    background: #3f51b5;
+    overflow: hidden;
+  }
+  
+  .box:before {
+    content: "M";
+    position: absolute;
+    top: 0;
+    background: #0f0f0f;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: transform .4s;
+  }
+  
+  .box:nth-child(2)::before {
+    transform: translateY(-100%);
+    content: 'I';
+  }
+  
+  .box:nth-child(3)::before {
+    content: 'N';
+  }
+  
+  .box:nth-child(4)::before {
+    transform: translateY(-100%);
+    content: 'F';
+  }
+  
+  .box:nth-child(5)::before {
+    content: 'O';
+  }
+  
+  .button:hover .box:before {
+    transform: translateY(0);
+  }
+
+/* 네비게이션 스타일 */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #3f51b5;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #2c387e;
+}
+
+
+/* 제목 스타일 */
+h2.jua-regular {
+    color: #fff;
+    margin-bottom: 20px; /* 제목과 콘텐츠 사이 간격 */
+}
+
+/*푸터 디자인*/
+.footer{
+    position: relative;
+    z-index: 1;
+    background: #000;
+    padding: 30px 0;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+    color: gray;
+    font-size: 0.8em;
+    width: 100%;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+
+
+.orbitron-uniquifier {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 10;
+  font-style: normal;
+}
+
+
+/* 제목 스타일 */
+.title {
+    color: #fff; /* 텍스트 색상 흰색 */
+    font-size: 2em; /* 제목 크기 조정 */
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0;
+}
+
+/* 서브타이틀 스타일 */
+.circle-title {
+    color: #fff; /* 텍스트 색상 흰색 */
+    font-size: 1.2em; /* 서브타이틀 크기 조정 */
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0;
+}
+
+
+.button-name {
+    display: flex;
+    position: absolute;
+    top: 20px; /* 원하는 위치로 조정 */
+    left: 20px; /* 원하는 위치로 조정 */
+  }
+
+  .box {
+    width: 35px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    transition: all .8s;
+    cursor: pointer;
+    position: relative;
+    background: #3f51b5;
+    overflow: hidden;
+}
+  
+.box:before {
+    content: "M";
+    position: absolute;
+    top: 0;
+    color: #3f51b5;
+    background: #0f0f0f;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: transform .4s;
+}
+  
+.box:nth-child(2)::before {
+    transform: translateY(-100%);
+    content: 'I';
+}
+  
+.box:nth-child(3)::before {
+    content: 'N';
+}
+  
+.box:nth-child(4)::before {
+    transform: translateY(-100%);
+    content: 'F';
+}
+  
+.box:nth-child(5)::before {
+    content: 'O';
+}
+  
+.button-name:hover .box:before {
+    transform: translateY(0);
+}
+
+/* ToDoList와 달력을 감싸는 박스 스타일 */
+.wrapper {
+    background: #101013; /* 박스 배경색 설정 */
+    padding: 20px; /* 박스 내부 여백 */
+    border-radius: 10px; /* 모서리를 둥글게 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    display: flex; /* Flexbox를 사용하여 자식 요소들을 정렬 */
+    justify-content: space-around; /* 자식 요소들 사이에 공간을 균등하게 배치 */
+    align-items: flex-start; /* 자식 요소들이 위쪽에 정렬되도록 설정 */
+}
+
+.container {
+    display: flex; /* Flexbox를 사용하여 ToDoList와 달력을 나란히 배치 */
+    justify-content: space-around; /* 요소 사이에 간격을 둠 */
+    align-items: flex-start; /* 요소들이 위쪽 정렬되도록 설정 */
+    background: #000;
+    padding: 30px 0;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+    color: gray;
+    font-size: 0.8em;
+    width: 100%
+}
+
+.todo-list ul, .calendar .days {
+    list-style-type: none;
+    padding: 0;
+}
+
+.calendar .weekdays, .calendar .days {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-todo{
+    background: #20232a;
+}
+
+.todo-list {
+    background: #20232a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000ae;
+    z-index: 10;
+    position: relative;
+    width: 500px; /* ToDoList 너비를 더 크게 설정 */
+}
+
+.todo-list h2 {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.todo-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-list li {
+    font-size: 18px; /* ToDoList 아이템 크기 증가 */
+    color: #fdfdfd; /* 원하는 색상 코드로 변경 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.todo-list li.completed {
+    text-decoration: line-through;
+}
+
+.todo-list li .delete {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+}
+
+.todo-list li .todo-actions {
+    display: flex;
+    align-items: center;
+}
+
+.todo-list input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.todo-list input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.calendar {
+    background: #20232a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000ae;
+    z-index: 10;
+    position: relative;
+    width: 600px; /* 달력의 너비를 더 크게 설정 */
+}
+
+.month {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; /* 요일 텍스트 색상 */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.weekdays {
+    font-size: 18px; /* 달력 요일 및 날짜 크기 증가 */
+    color: #ffffff; /* 원하는 색상 코드로 변경 */
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.days {
+    font-size: 18px; /* 달력 요일 및 날짜 크기 증가 */
+    font-weight: bold;
+    color: #ffffff; /* 원하는 색상 코드로 변경 */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.days div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.days div:not(.empty) {
+    cursor: pointer;
+}
+
+.days div:hover:not(.empty) {
+    background-color: #3f51b5;
+    border-radius: 50%;
+}
+
+.empty {
+    visibility: hidden;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000; /* z-index 값을 크게 설정 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content h2 {
+    color: #000000; /* 원하는 색상 코드로 변경 */
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000ae;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#memoText {
+    color: #000000; /* 원하는 색상 코드로 변경 */
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+}
